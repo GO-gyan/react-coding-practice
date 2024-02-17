@@ -1,0 +1,87 @@
+.folder {
+  margin-top: 6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 3px;
+  width: 400px;
+  background-color: rgb(191, 191, 191);
+  position: relative;
+}
+
+.folder > span {
+  margin: 0 5px 2px 0;
+}
+
+.file {
+  margin-top: 5px;
+  padding-left: 3px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 400px;
+}
+
+.folder > div > button {
+  font-size: 15px;
+  background-color: white;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.input-container>span {
+  margin-top: 5px;
+}
+
+.input-container__input {
+  margin: 6px 0 0px 0;
+  padding: 5px;
+  display: flex;
+  border: 1px solid lightgrey;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.icon-container {
+  position: absolute;
+  top: 50%;
+  right: 10em;
+  transform: translateY(-50%);
+  display: none; /* Initially hide the icon container */
+}
+
+.folder:hover .icon-container {
+  display: flex; /* Display the icon container on hover */
+}
+
+.file:hover .icon-container {
+  display: flex; /* Display the icon container on hover */
+  background-color: aliceblue;
+}
+
+.icon-container button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  background-color: transparent;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.icon-container button:hover {
+  background-color: #0062ff;
+  color: white;
+}
+
+.edit-icon::before {
+  content: '\270E'; /* Edit icon (unicode character) */
+}
+
+.delete-icon::before {
+  content: '\2716'; /* Delete icon (unicode character) */
+}
